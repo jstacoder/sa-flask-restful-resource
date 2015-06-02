@@ -8,9 +8,12 @@ to use:
 $ pip install sa-flask-restful-resource
 ```
 
-then define your models, app and create the resource,
-just pass your model when you register it with the api 
-with a dict as a keyword arg called `resource_class_kwargs`
+then just define:
+* your models
+* your app 
+* and create / register the resource
+    * pass your model to your Api when you register it
+    * pass it as a keyword arg called `resource_class_kwargs`
 
 ```python
 from sqlalchemy.ext.declarative import declarative_base
