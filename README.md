@@ -40,8 +40,8 @@ app.run()
 
 now you have these routes defined: 
 
-    `'/myresource' -> GET(get all resources),POST(create a new resource)`
-    `'/myresource/<int:item_id>' -> GET(get resource identifed by item_id)`
+    '/myresource' -> GET(get all resources),POST(create a new resource)
+    '/myresource/<int:item_id>' -> GET(get resource identifed by item_id)
 
 this is a work in progress, pull requests are welcome, 
 i plan on adding more automatic routes in the future. 
