@@ -1,5 +1,9 @@
 from setuptools import setup
+from os import system,path
 
+if not path.exists('venv'):
+    system('virtualenv venv')
+    system('./venv/bin/pip install -r requirements.txt -vvv -U --ignore-installed')
 
 setup_requires = [
     'aniso8601==1.0.0',
