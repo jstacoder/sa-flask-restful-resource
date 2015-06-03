@@ -27,11 +27,12 @@ install_requires = setup_requires
 
 setup(
     name="sa-flask-restful-resource",
-    version="0.0.2",
+    version="0.0.3",
     setup_requires=setup_requires,
     install_requires=install_requires,
     tests_require=tests_require,
     test_suite="demo.tests",
     description="base class for sqlalchemy and flask-restless",
     long_description="base class for building apis with sqlalchemy and flask-restless",
+    packages=['sa_flask_restful_resource'],
 )
