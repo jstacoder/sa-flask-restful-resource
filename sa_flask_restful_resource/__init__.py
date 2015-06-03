@@ -13,17 +13,14 @@ class BaseResource(Resource):
     make_model = {}
     parsers = {}
 
-    def __init__(self,model=None,fields=None,parser=None,make_model=None,*args,**kwargs):
+    def __init__(self,model=None,session=None,fields=None,parser=None,make_model=None,*args,**kwargs):
         self.model = model
         self.model_name = model.__name__.lower()
-        #BaseResource.models[self.model_name] = self.model
-        #BaseResource.make_model[self.model_name] = make_model
-        #BaseResource.parsers[self.model_name] = parser
-        self.__class__.models[self.model_name] = self.model
-        self.__class__.make_model[self.model_name] = make_model
-        self.__class__.parsers[self.model_name] = parser
-        self.session = self.model.session
-        self.__class__.session = self.session
+        BaseResource.models[self.model_name] = self.model
+        BaseResource.make_model[self.model_name] = make_model
+        BaseResource.parsers[self.model_name] = parser
+        self.session = session
+        BaseResource.session = self.session
         self.__class__.model_name = self.model_name
         self.model_fields = fields
         
