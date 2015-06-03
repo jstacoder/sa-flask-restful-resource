@@ -23,7 +23,7 @@ install_requires = setup_requires
 
 setup(
     name="sa-flask-restful-resource",
-    version="0.0.1",
+    version="0.0.2",
     setup_requires=setup_requires,
     install_requires=install_requires,
     tests_require=tests_require,
